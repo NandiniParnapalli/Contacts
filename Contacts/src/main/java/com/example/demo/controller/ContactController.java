@@ -27,19 +27,19 @@ public class ContactController {
 	ContactService contactService;
 	@GetMapping("/welcome")
 	public String welcome() {
-		return "welcome all";
+		return "welcome all..";
 	}
 	
 	@GetMapping("/user/userProfile")
 	@PreAuthorize("hasAuthority('ROLE_USER')")
 	public String userProfile() {
-		return "welcome user";
+		return "welcome user...";
 	}
 	
 	@GetMapping("/admin/adminProfile")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public String adminProfile() {
-		return "welcome admin";
+		return "welcome admin...";
 	}
 	@PostMapping("/contact")
 	public ResponseEntity<Contact> saveContact(@RequestBody Contact contact)
